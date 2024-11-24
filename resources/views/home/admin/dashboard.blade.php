@@ -126,6 +126,8 @@
             margin-bottom: 1.5rem;
         }
     </style>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -139,49 +141,57 @@
 
                 <!-- Overview Section -->
                 <div class="row mb-4">
-                <!-- Total Orders Card -->
-<div class="col-md-4">
-    <div class="card text-center text-white" style="background-color: #4c3228; color: white;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <i class="fas fa-box"></i> Total Orders
-            </h5>
-            <p class="card-text">21,375</p>
-            <p class="card-text text-warning" style="color: white;">-2.33%</p> <!-- Ensure this text is white -->
-            <p class="card-text" style="color: white;">Orders This Month: <strong>5,760</strong></p>
-        </div>
-    </div>
-</div>
-
-<!-- New Customers Card -->
-<div class="col-md-4">
-    <div class="card text-center text-white" style="background-color: #4c3228; color: white;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <i class="fas fa-users"></i> New Customers
-            </h5>
-            <p class="card-text">1,012</p>
-            <p class="card-text text-success" style="color: white;">+32.40%</p> <!-- Ensure this text is white -->
-            <p class="card-text" style="color: white;">Active Customers: <strong>600</strong></p>
-        </div>
-    </div>
-</div>
-
-<!-- Total Sales Card -->
-<div class="col-md-4">
-    <div class="card text-center text-white" style="background-color: #4c3228; color: white;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <i class="fas fa-dollar-sign"></i> Total Sales
-            </h5>
-            <p class="card-text">₱24,254</p>
-            <p class="card-text text-success" style="color: white;">+25%</p> <!-- Ensure this text is white -->
-            <p class="card-text" style="color: white;">Sales This Month: <strong>₱8,540</strong></p>
-        </div>
-    </div>
-</div>
-
-
+                    <!-- Total Orders Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center text-white" style="background: linear-gradient(145deg, #efcead, #9b6b43);">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-box"></i> Total Orders
+                                </h5>
+                                <p class="card-text" style="font-size: 2rem; font-weight: bold;">21,375</p>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="card-text text-warning">-2.33%</p>
+                                <p class="card-text">Orders This Month: <strong>5,760</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- New Customers Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center text-white" style="background: linear-gradient(145deg, #efcead, #9b6b43);">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-users"></i> New Customers
+                                </h5>
+                                <p class="card-text" style="font-size: 2rem; font-weight: bold;">1,012</p>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="card-text text-success">+32.40%</p>
+                                <p class="card-text">Active Customers: <strong>600</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Total Sales Card -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center text-white" style="background: linear-gradient(145deg, #efcead, #9b6b43);">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <i class="fas fa-dollar-sign"></i> Total Sales
+                                </h5>
+                                <p class="card-text" style="font-size: 2rem; font-weight: bold;">₱24,254</p>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="card-text text-success">+25%</p>
+                                <p class="card-text">Sales This Month: <strong>₱8,540</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
 
                 <!-- Sales Analytics Chart -->
@@ -190,6 +200,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Sales Analytics</h5>
+                                <!-- Canvas element for Chart.js -->
                                 <canvas id="sales-analytics-chart" class="sales-analytics"></canvas>
                             </div>
                         </div>
@@ -229,112 +240,146 @@
                             </div>
                         </div>
                     </div>
-                    
+                </div>
 
                 <!-- Coffee Specials -->
-                <div class="row mb-4 coffee-specials">
-                    <div class="col-md-4">
-                        <div class="card">
+<div class="row mb-4 coffee-specials">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">New Coffee Special</h5>
+                <p class="card-text">Offer of the month: Buy 1 Get 1 Free on Coffee Beans!</p>
+                <button class="btn btn-warning">Shop Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- New Card 1 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Limited Time Offer</h5>
+                <p class="card-text">20% off on Ground Coffee! Don't miss out.</p>
+                <button class="btn btn-warning">Shop Now</button>
+            </div>
+        </div>
+    </div>
+    <!-- New Card 2 -->
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Special Discount</h5>
+                <p class="card-text">Espresso Pods at a discounted price for a limited time.</p>
+                <button class="btn btn-warning">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Recent Orders -->
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card recent-orders">
                             <div class="card-body">
-                                <h5 class="card-title">Limited Edition Brew</h5>
-                                <p>Freshly brewed with organic beans!</p>
-                                <button class="btn btn-warning">Get it Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Caramel Frappe</h5>
-                                <p>Sweet and delightful!</p>
-                                <button class="btn btn-warning">Order Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Special Mocha Latte</h5>
-                                <p>Perfect blend of coffee and chocolate!</p>
-                                <button class="btn btn-warning">Order Now</button>
+                                <h5 class="card-title">Recent Orders</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order #</th>
+                                            <th>Product</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>Coffee Beans</td>
+                                            <td>Shipped</td>
+                                            <td>2024-11-22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12346</td>
+                                            <td>Espresso Pods</td>
+                                            <td>Pending</td>
+                                            <td>2024-11-23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- Customer Feedback -->
-                <div class="feedback-card">
-                    <h5 class="section-title">Customer Feedback</h5>
-                    <p><strong>John Doe</strong> - "Amazing service and great coffee quality!"</p>
-                    <p><strong>Jane Smith</strong> - "I loved the new Mocha flavor, will definitely order again!"</p>
-                </div>
-
-                <!-- Recent Orders Section -->
-                <div class="recent-orders">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Recent Orders</h5>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Items</th>
-                                        <th>Date & Time</th>
-                                        <th>Table Number</th>
-                                        <th>Price</th>
-                                        <th>Payment</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Cappuccino #254215</td>
-                                        <td>27 Oct 2023, 01:05 PM</td>
-                                        <td>2B</td>
-                                        <td>$200</td>
-                                        <td>Cash</td>
-                                        <td><button class="btn btn-primary btn-sm">Details</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <!-- Feedback Section -->
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card feedback-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Feedback</h5>
+                                <p>Thank you for being a valued supplier! Your feedback is important for improving our platform and services.</p>
+                                <button class="btn btn-success">Provide Feedback</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-
-        @include('home.footer')
     </div>
 
+    <!-- Bootstrap JS and other dependencies -->
     <script src="home/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="home/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript for the Sales Analytics Chart -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Sales Analytics Line Chart
-            const salesAnalyticsCtx = document.getElementById('sales-analytics-chart').getContext('2d');
-            new Chart(salesAnalyticsCtx, {
-                type: 'line',
-                data: {
-                    labels: ['09:00 AM', '12:00 PM', '04:00 PM', '08:00 PM', '12:00 AM'],
-                    datasets: [{
-                        label: 'Sales Analytics',
-                        data: [100, 150, 230, 180, 120],
-                        borderColor: '#FF5733',
-                        backgroundColor: 'rgba(255, 87, 51, 0.2)',
-                        tension: 0.4,
-                    }]
+        var ctx = document.getElementById('sales-analytics-chart').getContext('2d');
+        var salesAnalyticsChart = new Chart(ctx, {
+            type: 'line',  // Line chart
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],  // Monthly labels
+                datasets: [{
+                    label: 'Sales (₱)',
+                    data: [2000, 2500, 2300, 2800, 3000, 3500, 4000],  // Example sales data
+                    borderColor: '#4c3228',
+                    backgroundColor: 'rgba(76, 50, 40, 0.2)',
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return '₱' + tooltipItem.raw.toFixed(2);
+                            }
+                        }
+                    }
                 },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } }
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Sales (₱)'
+                        }
+                    }
                 }
-            });
+            }
         });
     </script>
+
 </body>
 
 </html>

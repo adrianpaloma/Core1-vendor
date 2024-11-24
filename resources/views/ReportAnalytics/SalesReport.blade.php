@@ -71,7 +71,7 @@
                                 <div class="sales-metrics">
                                     <div class="metrics-card">
                                         <h6>Total Sales</h6>
-                                        <p class="font-weight-bold">$8,320</p>
+                                        <p class="font-weight-bold">₱8,320</p>
                                     </div>
                                     <div class="metrics-card">
                                         <h6>Orders</h6>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="metrics-card">
                                         <h6>Avg. Order Value</h6>
-                                        <p class="font-weight-bold">$67</p>
+                                        <p class="font-weight-bold">₱67</p>
                                     </div>
                                     <div class="metrics-card">
                                         <h6>Returning Customers</h6>
@@ -113,15 +113,29 @@
                                             <td>2024-11-10</td>
                                             <td>#00123</td>
                                             <td>John Doe</td>
-                                            <td>$120</td>
+                                            <td>₱120</td>
                                             <td><span class="badge badge-success">Completed</span></td>
                                         </tr>
                                         <tr>
                                             <td>2024-11-11</td>
                                             <td>#00124</td>
                                             <td>Jane Smith</td>
-                                            <td>$240</td>
-                                            <td><span class="badge badge-warning">Pending</span></td>
+                                            <td>₱240</td>
+                                            <td><span class="badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-11-12</td>
+                                            <td>#00125</td>
+                                            <td>Mark Wilson</td>
+                                            <td>₱300</td>
+                                            <td><span class="badge badge-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-11-13</td>
+                                            <td>#00126</td>
+                                            <td>Emily Johnson</td>
+                                            <td>₱180</td>
+                                            <td><span class="badge badge-success">Completed</span></td>
                                         </tr>
                                         <!-- Add more rows as needed -->
                                     </tbody>

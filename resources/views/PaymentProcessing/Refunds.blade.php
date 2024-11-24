@@ -76,7 +76,7 @@
                                             <td>John Doe</td>
                                             <td>2024-11-12</td>
                                             <td><span class="badge badge-success"><i class="fa fa-check-circle refund-icon approved"></i>Approved</span></td>
-                                            <td class="refund-amount approved">$250</td>
+                                            <td class="refund-amount approved">₱250</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">View</a>
                                                 <a href="#" class="btn btn-outline-secondary btn-sm">Process</a>
@@ -87,7 +87,7 @@
                                             <td>Jane Smith</td>
                                             <td>2024-11-13</td>
                                             <td><span class="badge badge-warning"><i class="fa fa-clock refund-icon processing"></i>Processing</span></td>
-                                            <td class="refund-amount processing">$150</td>
+                                            <td class="refund-amount processing">₱150</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">View</a>
                                                 <a href="#" class="btn btn-outline-secondary btn-sm">Process</a>
@@ -98,7 +98,7 @@
                                             <td>Mike Johnson</td>
                                             <td>2024-11-14</td>
                                             <td><span class="badge badge-danger"><i class="fa fa-times-circle refund-icon rejected"></i>Rejected</span></td>
-                                            <td class="refund-amount rejected">$320</td>
+                                            <td class="refund-amount rejected">₱320</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">View</a>
                                             </td>
@@ -108,7 +108,7 @@
                                             <td>Sarah Lee</td>
                                             <td>2024-11-15</td>
                                             <td><span class="badge badge-info"><i class="fa fa-cog refund-icon processing"></i>In Review</span></td>
-                                            <td class="refund-amount">$180</td>
+                                            <td class="refund-amount">₱180</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">View</a>
                                                 <a href="#" class="btn btn-outline-secondary btn-sm">Process</a>

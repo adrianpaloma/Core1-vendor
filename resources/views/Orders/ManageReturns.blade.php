@@ -10,11 +10,20 @@
     <link rel="stylesheet" href="home/assets/vendor/font-awesome/fontawesome.css">
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Manage Returns</title>
+    <style>
+        .status-badge {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.6rem;
+        }
+        .action-btn {
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+    </style>
 </head>
 <body>
 
     <div class="dashboard-main-wrapper">
-
         @include('home.header')
         @include('home.sidenav')
 
@@ -48,10 +57,10 @@
                                                 <td>John Doe</td>
                                                 <td>Coffee Beans</td>
                                                 <td>2024-11-10</td>
-                                                <td><span class="badge badge-warning">Pending</span></td>
+                                                <td><span class="badge badge-warning status-badge">Pending</span></td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-success">Approve</button>
-                                                    <button class="btn btn-sm btn-danger">Reject</button>
+                                                    <a href="#" class="btn btn-outline-success btn-sm">Approve</a>
+                                                    <a href="#" class="btn btn-outline-danger btn-sm">Reject</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -59,9 +68,9 @@
                                                 <td>Jane Smith</td>
                                                 <td>Espresso Machine</td>
                                                 <td>2024-11-12</td>
-                                                <td><span class="badge badge-success">Approved</span></td>
+                                                <td><span class="badge badge-success status-badge">Approved</span></td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -69,9 +78,9 @@
                                                 <td>Mike Johnson</td>
                                                 <td>Milk Frother</td>
                                                 <td>2024-11-14</td>
-                                                <td><span class="badge badge-danger">Rejected</span></td>
+                                                <td><span class="badge badge-danger status-badge">Rejected</span></td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-primary">View Details</button>
+                                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -79,10 +88,10 @@
                                                 <td>Sarah Lee</td>
                                                 <td>French Press</td>
                                                 <td>2024-11-16</td>
-                                                <td><span class="badge badge-info">Under Review</span></td>
+                                                <td><span class="badge badge-info status-badge">Under Review</span></td>
                                                 <td>
-                                                    <button class="btn btn-sm btn-success">Approve</button>
-                                                    <button class="btn btn-sm btn-danger">Reject</button>
+                                                    <a href="#" class="btn btn-outline-success btn-sm">Approve</a>
+                                                    <a href="#" class="btn btn-outline-danger btn-sm">Reject</a>
                                                 </td>
                                             </tr>
                                         </tbody>

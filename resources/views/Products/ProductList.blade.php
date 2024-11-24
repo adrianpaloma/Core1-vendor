@@ -10,17 +10,9 @@
     <link rel="stylesheet" href="css/txt.css">
     <title>Product List</title>
     <style>
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .card {
-            transition: all 0.3s ease;
-            border: none;
-            overflow: hidden;
-        }
-        .card-img-top {
-            height: 200px;
+        .table img {
+            width: 100px;
+            height: 100px;
             object-fit: cover;
         }
         .btn-primary {
@@ -29,11 +21,6 @@
         }
         .btn-primary:hover {
             background-color: #4cae4c;
-        }
-        .price {
-            font-size: 1.25rem;
-            color: #333;
-            font-weight: bold;
         }
     </style>
 </head>
@@ -46,120 +33,162 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content">
-                <div class="d-flex flex-wrap justify-content-center mt-4">
-                    
-                    <div class="d-flex flex-wrap justify-content-center mt-4">
-                        <!-- Coffee Beans -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://www.coffeehit.co.uk/cdn/shop/articles/coffee-beans-101-the-4-most-popular-beans-explained.jpg?v=1708448895&width=1500" class="card-img-top" alt="Coffee Beans">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Coffee Beans</h5>
-                                <p class="card-text">High-quality coffee beans for brewing the perfect cup.</p>
-                                <p class="price">₱699.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Ground Coffee -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://www.frontrangefed.com/wp-content/uploads/2023/10/cold-brew-coffee-3.jpg" class="card-img-top" alt="Ground Coffee">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Ground Coffee</h5>
-                                <p class="card-text">Freshly ground coffee for a convenient brew.</p>
-                                <p class="price">₱479.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Espresso Pods -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://i5.walmartimages.com/asr/889a05f3-c88e-46a0-a920-fca005bbf45c.aa51acc2a1a312ee9ffc8094f7812324.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" class="card-img-top" alt="Espresso Pods">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Espresso Pods</h5>
-                                <p class="card-text">Espresso pods in various flavors and strengths.</p>
-                                <p class="price">₱849.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Loose Leaf Tea -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://media.twgtea.com/images/default-source/product-images/loose-leaf-teas/4-5-2000x2500/t14_01.tmb-twg_rs450.webp?sfvrsn=a4496484_1" class="card-img-top" alt="Loose Leaf Tea">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Loose Leaf Tea</h5>
-                                <p class="card-text">Premium loose leaf teas in a variety of flavors.</p>
-                                <p class="price">₱999.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Tea Bags -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://chineseteas101.com/wp-content/uploads/2023/03/tea-bags.jpg" class="card-img-top" alt="Tea Bags">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Tea Bags</h5>
-                                <p class="card-text">Convenient tea bags in a variety of flavors.</p>
-                                <p class="price">₱349.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Milk and Dairy Alternatives -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://colonydiner.com/wp-content/uploads/2023/12/glasses-of-vegan-plant-based-milk-300x300.jpg" class="card-img-top" alt="Milk and Dairy Alternatives">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Milk & Dairy Alternatives</h5>
-                                <p class="card-text">Regular, almond, oat, and other plant-based milk options.</p>
-                                <p class="price">₱199.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Coffee Machines -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://m.media-amazon.com/images/I/6190zcm9RVL._AC_SL1500_.jpg" class="card-img-top" alt="Coffee Machines">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Coffee Machines</h5>
-                                <p class="card-text">Professional coffee machines for reliable, high-quality brews.</p>
-                                <p class="price">₱14,999.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Flavoring Syrups -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://www.redber.co.uk/cdn/shop/products/simply-syrups-coffee-standard-caramel-vanilla-hazelnut-3x-1L-2.jpg?v=1655372500&width=322" class="card-img-top" alt="Flavoring Syrups">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Flavoring Syrups</h5>
-                                <p class="card-text">Vanilla, caramel, hazelnut, and seasonal flavors.</p>
-                                <p class="price">₱699.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Sweeteners -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://static.vecteezy.com/system/resources/previews/025/476/566/non_2x/variety-of-sweeteners-stevia-sugar-pollen-and-honey-ai-generated-photo.jpeg" class="card-img-top" alt="Sweeteners">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Sweeteners</h5>
-                                <p class="card-text">Sugar, stevia, honey, and other options.</p>
-                                <p class="price">₱249.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-                    
-                        <!-- Cups and Lids -->
-                        <div class="card m-3" style="width: 18rem;">
-                            <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98o-lkkhy3ffinnabd" class="card-img-top" alt="Cups & Lids">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Cups & Lids</h5>
-                                <p class="card-text">Disposable cups and lids for serving hot beverages.</p>
-                                <p class="price">₱399.00</p> <!-- Price in Peso -->
-                                <a href="#" class="btn btn-primary">Learn More</a>
-                            </div>
-                        </div>
-
-                    </div>
+                <h3 class="mt-4">Product List</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover mt-4">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Image</th>
+                                <th>Code</th>
+                                <th>Material Name</th>
+                                <th>Cost</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Coffee Beans -->
+                            <tr>
+                                <td><img src="https://www.coffeehit.co.uk/cdn/shop/articles/coffee-beans-101-the-4-most-popular-beans-explained.jpg?v=1708448895&width=1500" alt="Coffee Beans"></td>
+                                <td>CB001</td>
+                                <td>Coffee Beans</td>
+                                <td>₱500.00</td>
+                                <td>₱699.00</td>
+                                <td>100</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Ground Coffee -->
+                            <tr>
+                                <td><img src="https://www.frontrangefed.com/wp-content/uploads/2023/10/cold-brew-coffee-3.jpg" alt="Ground Coffee"></td>
+                                <td>GC002</td>
+                                <td>Ground Coffee</td>
+                                <td>₱300.00</td>
+                                <td>₱479.00</td>
+                                <td>150</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Espresso Pods -->
+                            <tr>
+                                <td><img src="https://i5.walmartimages.com/asr/889a05f3-c88e-46a0-a920-fca005bbf45c.aa51acc2a1a312ee9ffc8094f7812324.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Espresso Pods"></td>
+                                <td>EP003</td>
+                                <td>Espresso Pods</td>
+                                <td>₱600.00</td>
+                                <td>₱849.00</td>
+                                <td>80</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Loose Leaf Tea -->
+                            <tr>
+                                <td><img src="https://media.twgtea.com/images/default-source/product-images/loose-leaf-teas/4-5-2000x2500/t14_01.tmb-twg_rs450.webp?sfvrsn=a4496484_1" alt="Loose Leaf Tea"></td>
+                                <td>LT004</td>
+                                <td>Loose Leaf Tea</td>
+                                <td>₱700.00</td>
+                                <td>₱999.00</td>
+                                <td>50</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Tea Bags -->
+                            <tr>
+                                <td><img src="https://chineseteas101.com/wp-content/uploads/2023/03/tea-bags.jpg" alt="Tea Bags"></td>
+                                <td>TB005</td>
+                                <td>Tea Bags</td>
+                                <td>₱200.00</td>
+                                <td>₱349.00</td>
+                                <td>200</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Milk and Dairy Alternatives -->
+                            <tr>
+                                <td><img src="https://colonydiner.com/wp-content/uploads/2023/12/glasses-of-vegan-plant-based-milk-300x300.jpg" alt="Milk & Dairy Alternatives"></td>
+                                <td>MD006</td>
+                                <td>Milk & Dairy Alternatives</td>
+                                <td>₱120.00</td>
+                                <td>₱199.00</td>
+                                <td>250</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Coffee Machines -->
+                            <tr>
+                                <td><img src="https://m.media-amazon.com/images/I/6190zcm9RVL._AC_SL1500_.jpg" alt="Coffee Machines"></td>
+                                <td>CM007</td>
+                                <td>Coffee Machines</td>
+                                <td>₱12,000.00</td>
+                                <td>₱14,999.00</td>
+                                <td>30</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Flavoring Syrups -->
+                            <tr>
+                                <td><img src="https://www.redber.co.uk/cdn/shop/products/simply-syrups-coffee-standard-caramel-vanilla-hazelnut-3x-1L-2.jpg?v=1655372500&width=322" alt="Flavoring Syrups"></td>
+                                <td>FS008</td>
+                                <td>Flavoring Syrups</td>
+                                <td>₱500.00</td>
+                                <td>₱699.00</td>
+                                <td>100</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Sweeteners -->
+                            <tr>
+                                <td><img src="https://static.vecteezy.com/system/resources/previews/025/476/566/non_2x/variety-of-sweeteners-stevia-sugar-pollen-and-honey-ai-generated-photo.jpeg" alt="Sweeteners"></td>
+                                <td>SW009</td>
+                                <td>Sweeteners</td>
+                                <td>₱180.00</td>
+                                <td>₱249.00</td>
+                                <td>300</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                            
+                            <!-- Cups and Lids -->
+                            <tr>
+                                <td><img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98o-lkkhy3ffinnabd" alt="Cups & Lids"></td>
+                                <td>CL010</td>
+                                <td>Cups & Lids</td>
+                                <td>₱250.00</td>
+                                <td>₱399.00</td>
+                                <td>500</td>
+                                <td>
+                                    <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
                             class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
                     <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
                         <li>
-                            <div class="notification-title"> Notification</div>
+                            <div class="notification-title"> Notifications</div>
                             <div class="notification-list">
                                 <div class="list-group">
                                     <a href="#" class="list-group-item list-group-item-action active">
@@ -30,8 +30,7 @@
                                                     src="home/assets/images/avatar-2.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
-                                                    class="notification-list-user-name"></span>accepted your
-                                                invitation to join the team.
+                                                    class="notification-list-user-name"></span>Your Coffee Beans order has been confirmed.
                                                 <div class="notification-date">2 min ago</div>
                                             </div>
                                         </div>
@@ -42,9 +41,8 @@
                                                     src="home/assets/images/avatar-3.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
-                                                    class="notification-list-user-name"></span>is now following
-                                                you
-                                                <div class="notification-date">2 days ago</div>
+                                                    class="notification-list-user-name"></span>New order request for Ground Coffee.
+                                                <div class="notification-date">2 hours ago</div>
                                             </div>
                                         </div>
                                     </a>
@@ -54,9 +52,8 @@
                                                     src="home/assets/images/avatar-4.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
-                                                    class="notification-list-user-name"></span> is watching your
-                                                main repository
-                                                <div class="notification-date">2 min ago</div>
+                                                    class="notification-list-user-name"></span>One of your customers is interested in Espresso Pods.
+                                                <div class="notification-date">1 day ago</div>
                                             </div>
                                         </div>
                                     </a>
@@ -66,9 +63,8 @@
                                                     src="home/assets/images/avatar-5.jpg" alt=""
                                                     class="user-avatar-md rounded-circle"></div>
                                             <div class="notification-list-user-block"><span
-                                                    class="notification-list-user-name"></span>accepted your
-                                                invitation to join the team.
-                                                <div class="notification-date">2 min ago</div>
+                                                    class="notification-list-user-name"></span>Your Loose Leaf Tea shipment is ready for dispatch.
+                                                <div class="notification-date">2 days ago</div>
                                             </div>
                                         </div>
                                     </a>
@@ -87,7 +83,7 @@
                     <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
                         <li class="connection-list">
                             <div class="row">
-                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                     <a href="#" class="connection-item"><img
                                             src="home/assets/images/github.png" alt="">
                                         <span>Github</span></a>
@@ -106,13 +102,12 @@
                     <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
                         aria-labelledby="navbarDropdownMenuLink2">
                         <div class="nav-user-info">
-                            <h5 class="mb-0 text-white nav-user-name ml-2"> User </h5>
+                            <h5 class="mb-0 text-white nav-user-name ml-2"> Supplier </h5>
                             <span class="status"></span><span class="ml-2">Available</span>
                         </div>
                         <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Settings</a>
                         <a class="dropdown-item" href="{{ route('logins') }}"><i class="fas fa-power-off mr-2"></i>Login</a>
                         <a class="dropdown-item" href="{{ route('signup') }}"><i class="fa fa-right-to-bracket mr-2"></i>Sign-up</a>
-
                     </div>
                 </li>
             </ul>

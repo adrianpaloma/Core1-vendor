@@ -126,6 +126,8 @@
             margin-bottom: 1.5rem;
         }
     </style>
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -140,51 +142,47 @@
                 <!-- Overview Section -->
                 <div class="row mb-4">
                     <!-- Total Orders Card -->
-                    <div class="col-md-4">
-                        <div class="card text-center bg-primary text-white">
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center text-white" style="background-color: #4c3228;">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-box"></i> Total Orders
                                 </h5>
                                 <p class="card-text">21,375</p>
                                 <p class="card-text text-warning">-2.33%</p>
-                                <!-- Additional metric (e.g., Orders this month) -->
                                 <p class="card-text">Orders This Month: <strong>5,760</strong></p>
                             </div>
                         </div>
                     </div>
-                
+
                     <!-- New Customers Card -->
-                    <div class="col-md-4">
-                        <div class="card text-center bg-success text-white">
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center text-white" style="background-color: #4c3228;">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-users"></i> New Customers
                                 </h5>
                                 <p class="card-text">1,012</p>
                                 <p class="card-text text-success">+32.40%</p>
-                                <!-- Additional metric (e.g., Active Customers) -->
                                 <p class="card-text">Active Customers: <strong>600</strong></p>
                             </div>
                         </div>
                     </div>
-                
+
                     <!-- Total Sales Card -->
-                    <div class="col-md-4">
-                        <div class="card text-center bg-danger text-white">
+                    <div class="col-md-4 mb-4">
+                        <div class="card text-center text-white" style="background-color: #4c3228;">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <i class="fas fa-dollar-sign"></i> Total Sales
                                 </h5>
-                                <p class="card-text">$24,254</p>
+                                <p class="card-text">₱24,254</p>
                                 <p class="card-text text-success">+25%</p>
-                                <!-- Additional metric (e.g., Sales this month) -->
-                                <p class="card-text">Sales This Month: <strong>$8,540</strong></p>
+                                <p class="card-text">Sales This Month: <strong>₱8,540</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                
 
                 <!-- Sales Analytics Chart -->
                 <div class="row mb-4">
@@ -192,6 +190,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Sales Analytics</h5>
+                                <!-- Canvas element for Chart.js -->
                                 <canvas id="sales-analytics-chart" class="sales-analytics"></canvas>
                             </div>
                         </div>
@@ -204,129 +203,152 @@
                                 <h5 class="card-title">Coffee Supplies for Your Shop</h5>
                                 <div class="trending-coffee">
                                     <div class="coffee-item">
-                                        <img src="coffee-cup-icon.jpg" alt="Cappuccino Beans">
-                                        <span>Cappuccino Beans</span>
-                                        <span class="price">$45.00 (250 kg)</span>
+                                        <img src="https://www.coffeehit.co.uk/cdn/shop/articles/coffee-beans-101-the-4-most-popular-beans-explained.jpg?v=1708448895&width=1500" alt="Coffee Beans">
+                                        <span>Coffee Beans</span>
+                                        <span class="price">₱45.00 (250 kg)</span>
                                         <button class="btn btn-primary btn-sm">Order Now</button>
                                     </div>
                                     <div class="coffee-item">
-                                        <img src="coffee-cup-icon.jpg" alt="Latte Beans">
-                                        <span>Latte Beans</span>
-                                        <span class="price">$38.00 (300 kg)</span>
+                                        <img src="https://www.frontrangefed.com/wp-content/uploads/2023/10/cold-brew-coffee-3.jpg" alt="Ground Coffee">
+                                        <span>Ground Coffee</span>
+                                        <span class="price">₱38.00 (300 kg)</span>
                                         <button class="btn btn-primary btn-sm">Order Now</button>
                                     </div>
                                     <div class="coffee-item">
-                                        <img src="coffee-cup-icon.jpg" alt="Espresso Beans">
-                                        <span>Espresso Beans</span>
-                                        <span class="price">$50.00 (200 kg)</span>
+                                        <img src="https://i5.walmartimages.com/asr/889a05f3-c88e-46a0-a920-fca005bbf45c.aa51acc2a1a312ee9ffc8094f7812324.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Espresso Pods">
+                                        <span>Espresso Pods</span>
+                                        <span class="price">₱50.00 (200 kg)</span>
                                         <button class="btn btn-primary btn-sm">Order Now</button>
                                     </div>
                                     <div class="coffee-item">
-                                        <img src="coffee-cup-icon.jpg" alt="Roast Beans">
-                                        <span>Roast Beans</span>
-                                        <span class="price">$60.00 (150 kg)</span>
+                                        <img src="https://media.twgtea.com/images/default-source/product-images/loose-leaf-teas/4-5-2000x2500/t14_01.tmb-twg_rs450.webp?sfvrsn=a4496484_1" alt="Loose Leaf Tea">
+                                        <span>Loose Leaf Tea</span>
+                                        <span class="price">₱60.00 (150 kg)</span>
                                         <button class="btn btn-primary btn-sm">Order Now</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+                </div>
 
                 <!-- Coffee Specials -->
                 <div class="row mb-4 coffee-specials">
-                    <div class="col-md-4">
+                    <div class="col-md-4 mb-4">
                         <div class="card">
                             <div class="card-body">
-                                <h5 class="card-title">Limited Edition Brew</h5>
-                                <p>Freshly brewed with organic beans!</p>
-                                <button class="btn btn-warning">Get it Now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Caramel Frappe</h5>
-                                <p>Cool down with our signature Frappe!</p>
-                                <button class="btn btn-warning">Get it Now</button>
+                                <h5 class="card-title">New Coffee Special</h5>
+                                <p class="card-text">Offer of the month: Buy 1 Get 1 Free on Coffee Beans!</p>
+                                <button class="btn btn-warning">Shop Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Customer Feedback -->
-                <div class="feedback-card">
-                    <h5 class="section-title">Customer Feedback</h5>
-                    <p><strong>John Doe</strong> - "Amazing service and great coffee quality!"</p>
-                    <p><strong>Jane Smith</strong> - "I loved the new Mocha flavor, will definitely order again!"</p>
+                <!-- Recent Orders -->
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card recent-orders">
+                            <div class="card-body">
+                                <h5 class="card-title">Recent Orders</h5>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order #</th>
+                                            <th>Product</th>
+                                            <th>Status</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>12345</td>
+                                            <td>Coffee Beans</td>
+                                            <td>Shipped</td>
+                                            <td>2024-11-22</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12346</td>
+                                            <td>Espresso Pods</td>
+                                            <td>Pending</td>
+                                            <td>2024-11-23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Recent Orders Section -->
-                <div class="recent-orders">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Recent Orders</h5>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Items</th>
-                                        <th>Date & Time</th>
-                                        <th>Table Number</th>
-                                        <th>Price</th>
-                                        <th>Payment</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>Cappuccino #254215</td>
-                                        <td>27 Oct 2023, 01:05 PM</td>
-                                        <td>2B</td>
-                                        <td>$200</td>
-                                        <td>Cash</td>
-                                        <td><button class="btn btn-primary btn-sm">Details</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <!-- Feedback Section -->
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card feedback-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Feedback</h5>
+                                <p>Thank you for being a valued supplier! Your feedback is important for improving our platform and services.</p>
+                                <button class="btn btn-success">Provide Feedback</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-
-        @include('home.footer')
     </div>
 
+    <!-- Bootstrap JS and other dependencies -->
     <script src="home/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="home/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- JavaScript for the Sales Analytics Chart -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Sales Analytics Line Chart
-            const salesAnalyticsCtx = document.getElementById('sales-analytics-chart').getContext('2d');
-            new Chart(salesAnalyticsCtx, {
-                type: 'line',
-                data: {
-                    labels: ['09:00 AM', '12:00 PM', '04:00 PM', '08:00 PM', '12:00 AM'],
-                    datasets: [{
-                        label: 'Sales Analytics',
-                        data: [100, 150, 230, 180, 120],
-                        borderColor: '#FF5733',
-                        backgroundColor: 'rgba(255, 87, 51, 0.2)',
-                        tension: 0.4,
-                    }]
+        var ctx = document.getElementById('sales-analytics-chart').getContext('2d');
+        var salesAnalyticsChart = new Chart(ctx, {
+            type: 'line',  // Line chart
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],  // Monthly labels
+                datasets: [{
+                    label: 'Sales (₱)',
+                    data: [2000, 2500, 2300, 2800, 3000, 3500, 4000],  // Example sales data
+                    borderColor: '#4c3228',
+                    backgroundColor: 'rgba(76, 50, 40, 0.2)',
+                    borderWidth: 2,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return '₱' + tooltipItem.raw.toFixed(2);
+                            }
+                        }
+                    }
                 },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { display: false } }
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Sales (₱)'
+                        }
+                    }
                 }
-            });
+            }
         });
     </script>
+
 </body>
 
 </html>

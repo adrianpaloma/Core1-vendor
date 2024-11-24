@@ -73,7 +73,7 @@
                                             <td>#TX12345</td>
                                             <td><i class="fa fa-arrow-down transaction-icon debit"></i>Payment</td>
                                             <td><span class="badge badge-success">Completed</span></td>
-                                            <td class="transaction-amount debit">-$250</td>
+                                            <td class="transaction-amount debit">₱250</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
                                             </td>
@@ -83,7 +83,7 @@
                                             <td>#TX12346</td>
                                             <td><i class="fa fa-arrow-up transaction-icon credit"></i>Deposit</td>
                                             <td><span class="badge badge-warning">Pending</span></td>
-                                            <td class="transaction-amount credit">+$500</td>
+                                            <td class="transaction-amount credit">₱500</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
                                             </td>
@@ -93,7 +93,7 @@
                                             <td>#TX12347</td>
                                             <td><i class="fa fa-arrow-down transaction-icon debit"></i>Purchase</td>
                                             <td><span class="badge badge-danger">Failed</span></td>
-                                            <td class="transaction-amount debit">-$75</td>
+                                            <td class="transaction-amount debit">₱75</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
                                             </td>
@@ -103,7 +103,7 @@
                                             <td>#TX12348</td>
                                             <td><i class="fa fa-arrow-up transaction-icon credit"></i>Refund</td>
                                             <td><span class="badge badge-info">Processing</span></td>
-                                            <td class="transaction-amount credit">+$120</td>
+                                            <td class="transaction-amount credit">₱120</td>
                                             <td>
                                                 <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
                                             </td>

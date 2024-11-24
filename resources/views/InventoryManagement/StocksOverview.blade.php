@@ -11,7 +11,7 @@
     <title>Stocks Overview</title>
     <style>
         .card-header {
-            background-color: #003366;
+            background-color: #744c24;
             color: #ffffff;
             font-weight: bold;
         }
@@ -119,6 +119,54 @@
                                             <div class="item-stock">200 items in stock</div>
                                             <div class="progress mt-2">
                                                 <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stock Item 5 -->
+                                    <div class="stock-item d-flex align-items-center">
+                                        <span class="status-icon low-stock" title="Low Stock">&#x26A0;</span>
+                                        <div class="flex-grow-1">
+                                            <div class="item-name">Sugar Packets</div>
+                                            <div class="item-stock">25 items in stock</div>
+                                            <div class="progress mt-2">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stock Item 6 -->
+                                    <div class="stock-item d-flex align-items-center">
+                                        <span class="status-icon in-stock" title="In Stock">&#x2714;</span>
+                                        <div class="flex-grow-1">
+                                            <div class="item-name">Coffee Machines</div>
+                                            <div class="item-stock">120 items in stock</div>
+                                            <div class="progress mt-2">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stock Item 7 -->
+                                    <div class="stock-item d-flex align-items-center">
+                                        <span class="status-icon out-of-stock" title="Out of Stock">&#x2716;</span>
+                                        <div class="flex-grow-1">
+                                            <div class="item-name">Barista Aprons</div>
+                                            <div class="item-stock">0 items in stock</div>
+                                            <div class="progress mt-2">
+                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stock Item 8 -->
+                                    <div class="stock-item d-flex align-items-center">
+                                        <span class="status-icon low-stock" title="Low Stock">&#x26A0;</span>
+                                        <div class="flex-grow-1">
+                                            <div class="item-name">Coffee Filters</div>
+                                            <div class="item-stock">10 items in stock</div>
+                                            <div class="progress mt-2">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </div>

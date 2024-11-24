@@ -101,13 +101,13 @@
                                     </div>
                                     <div class="metrics-card">
                                         <h6>Value of Stock</h6>
-                                        <p class="font-weight-bold">$120,000</p>
+                                        <p class="font-weight-bold">₱120,000</p>
                                     </div>
                                 </div>
 
                                 <!-- Coffee Stock Level Chart -->
                                 <div class="chart-container">
-                                    <!-- Placeholder chart -->
+                                    <!-- Updated chart -->
                                     <canvas id="coffeeChart"></canvas>
                                 </div>
 
@@ -127,22 +127,43 @@
                                             <td>Arabica Beans</td>
                                             <td>Beans</td>
                                             <td>150</td>
-                                            <td>$500</td>
+                                            <td>₱500</td>
                                             <td><span class="badge badge-success">In Stock</span></td>
                                         </tr>
                                         <tr>
                                             <td>Robusta Ground</td>
                                             <td>Ground</td>
                                             <td>20</td>
-                                            <td>$120</td>
+                                            <td>₱120</td>
                                             <td><span class="badge badge-warning">Low Stock</span></td>
                                         </tr>
                                         <tr>
                                             <td>Instant Coffee Pack</td>
                                             <td>Instant</td>
                                             <td>0</td>
-                                            <td>$25</td>
+                                            <td>₱25</td>
                                             <td><span class="badge badge-danger">Out of Stock</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Espresso Beans</td>
+                                            <td>Beans</td>
+                                            <td>80</td>
+                                            <td>₱350</td>
+                                            <td><span class="badge badge-success">In Stock</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Decaf Ground</td>
+                                            <td>Ground</td>
+                                            <td>50</td>
+                                            <td>₱200</td>
+                                            <td><span class="badge badge-success">In Stock</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cappuccino Instant</td>
+                                            <td>Instant</td>
+                                            <td>10</td>
+                                            <td>₱60</td>
+                                            <td><span class="badge badge-warning">Low Stock</span></td>
                                         </tr>
                                         <!-- Add more rows as needed -->
                                     </tbody>
@@ -171,10 +192,10 @@
     const coffeeChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Beans', 'Ground', 'Instant'],
+            labels: ['Beans', 'Ground', 'Instant', 'Espresso', 'Decaf', 'Cappuccino'],
             datasets: [{
                 label: 'Stock Level',
-                data: [150, 100, 80],
+                data: [150, 20, 0, 80, 50, 10], // Updated with new products
                 backgroundColor: '#28a745',
                 borderColor: '#28a745',
                 borderWidth: 1

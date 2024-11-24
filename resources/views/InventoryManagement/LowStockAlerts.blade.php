@@ -93,6 +93,67 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- Add more low stock products -->
+                                    <div class="col-md-4">
+                                        <div class="card low-stock-card mb-4">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Coffee Beans</h6>
+                                                <p><strong>Stock Left:</strong> 10 units</p>
+                                                <p><strong>Supplier:</strong> CoffeeWorld Inc.</p>
+                                                <p><span class="badge badge-danger low-stock-badge">Low Stock</span></p>
+                                                <a href="#" class="btn btn-outline-danger restock-btn">Restock</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card low-stock-card mb-4">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Sugar Packets</h6>
+                                                <p><strong>Stock Left:</strong> 12 units</p>
+                                                <p><strong>Supplier:</strong> SweetGoods Co.</p>
+                                                <p><span class="badge badge-danger low-stock-badge">Low Stock</span></p>
+                                                <a href="#" class="btn btn-outline-danger restock-btn">Restock</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card low-stock-card mb-4">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Coffee Machines</h6>
+                                                <p><strong>Stock Left:</strong> 5 units</p>
+                                                <p><strong>Supplier:</strong> TechBrew</p>
+                                                <p><span class="badge badge-danger low-stock-badge">Low Stock</span></p>
+                                                <a href="#" class="btn btn-outline-danger restock-btn">Restock</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card low-stock-card mb-4">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Coffee Filters</h6>
+                                                <p><strong>Stock Left:</strong> 10 units</p>
+                                                <p><strong>Supplier:</strong> FilterCo.</p>
+                                                <p><span class="badge badge-danger low-stock-badge">Low Stock</span></p>
+                                                <a href="#" class="btn btn-outline-danger restock-btn">Restock</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card low-stock-card mb-4">
+                                            <div class="card-body">
+                                                <h6 class="card-title">Barista Aprons</h6>
+                                                <p><strong>Stock Left:</strong> 4 units</p>
+                                                <p><strong>Supplier:</strong> Stylish Aprons</p>
+                                                <p><span class="badge badge-warning low-stock-badge">Critically Low</span></p>
+                                                <a href="#" class="btn btn-outline-danger restock-btn">Restock</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <!-- Additional low stock products can be added here -->
                                 </div>
                             </div>

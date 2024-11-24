@@ -63,7 +63,7 @@
                                             <li><strong>Order Date:</strong> 2024-11-12</li>
                                             <li><strong>Status:</strong> <span class="badge badge-success">Shipped</span></li>
                                             <li><strong>Payment Method:</strong> Credit Card (**** **** **** 1234)</li>
-                                            <li><strong>Total Amount:</strong> $250</li>
+                                            <li><strong>Total Amount:</strong> ₱250</li>
                                         </ul>
                                     </div>
 
@@ -83,30 +83,30 @@
                                                 <tr>
                                                     <td>Espresso Beans</td>
                                                     <td>2</td>
-                                                    <td>$50</td>
-                                                    <td>$100</td>
+                                                    <td>₱50</td>
+                                                    <td>₱100</td>
                                                 </tr>
                                                 <tr>
                                                     <td>French Press</td>
                                                     <td>1</td>
-                                                    <td>$60</td>
-                                                    <td>$60</td>
+                                                    <td>₱60</td>
+                                                    <td>₱60</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Organic Milk</td>
                                                     <td>3</td>
-                                                    <td>$20</td>
-                                                    <td>$60</td>
+                                                    <td>₱20</td>
+                                                    <td>₱60</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Syrup - Vanilla</td>
                                                     <td>2</td>
-                                                    <td>$15</td>
-                                                    <td>$30</td>
+                                                    <td>₱15</td>
+                                                    <td>₱30</td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="3" class="text-right"><strong>Total</strong></td>
-                                                    <td><strong>$250</strong></td>
+                                                    <td><strong>₱250</strong></td>
                                                 </tr>
                                             </tbody>
                                         </table>
