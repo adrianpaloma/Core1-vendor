@@ -67,8 +67,8 @@
                                             <td>
                                                 <a href="#" class="btn btn-outline-success btn-sm">Approve</a>
                                                 <a href="#" class="btn btn-outline-danger btn-sm">Reject</a>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">View</a>
-                                            </td>
+                                                <a  href="{{route('OrderDetails')}}"  class="btn btn-outline-primary btn-sm">View</a>
+                                             </td>
                                         </tr>
                                         <tr>
                                             <td>#12346</td>
@@ -79,7 +79,7 @@
                                             <td>
                                                 <a href="#" class="btn btn-outline-success btn-sm">Approve</a>
                                                 <a href="#" class="btn btn-outline-danger btn-sm">Reject</a>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                                                <a  href="{{route('OrderDetails')}}"  class="btn btn-outline-primary btn-sm">View</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -91,7 +91,7 @@
                                             <td>
                                                 <a href="#" class="btn btn-outline-success btn-sm">Approve</a>
                                                 <a href="#" class="btn btn-outline-danger btn-sm">Reject</a>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                                                <a  href="{{route('OrderDetails')}}"  class="btn btn-outline-primary btn-sm">View</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -103,7 +103,7 @@
                                             <td>
                                                 <a href="#" class="btn btn-outline-success btn-sm">Approve</a>
                                                 <a href="#" class="btn btn-outline-danger btn-sm">Reject</a>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">View</a>
+                                                <a  href="{{route('OrderDetails')}}"  class="btn btn-outline-primary btn-sm">View</a>
                                             </td>
                                         </tr>
                                     </tbody>
