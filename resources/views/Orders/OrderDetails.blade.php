@@ -12,18 +12,55 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Order Details</title>
     <style>
-        .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+         .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
         }
-        .table {
-            margin-bottom: 0;
+        .card-header {
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .section-title {
             font-size: 1.1rem;
             font-weight: 600;
             color: #495057;
+            border-left: 3px solid #efcead;
+            padding-left: 10px;
+            margin-top: 15px;
         }
+        .list-unstyled li {
+            margin-bottom: 8px;
+        }
+        .badge-success {
+            background-color: #28a745;
+            color: white;
+            font-size: 0.9rem;
+        }
+        .table {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .table th {
+            background-color: #bb9351;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+        .table tbody tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+            text-align: center;
+        }
+        
     </style>
 </head>
 <body>
@@ -41,7 +78,7 @@
                         <div class="col-md-12">
                             <div class="card mb-4">
                                 <div class="card-header">
-                                    <h5 class="card-title mb-0">Order Details - Order ID: #12345</h5>
+                                    <h5 class="mb-0" style="color: white;">Order Details</h5>
                                 </div>
                                 <div class="card-body">
                                     

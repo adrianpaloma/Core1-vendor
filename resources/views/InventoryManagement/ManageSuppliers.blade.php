@@ -10,25 +10,93 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Manage Suppliers</title>
     <style>
+         .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
-            background-color: #f3f4f6;
-            border-bottom: 1px solid #e1e4e8;
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .card-body {
-            padding: 1rem;
+            padding: 1.5rem;
         }
         .supplier-card {
-            transition: box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .supplier-card:hover {
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
         }
+        /* Enhanced Button Styles */
         .btn-primary, .btn-secondary {
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6e4b3d, #9e5d3b);
+            color: #fff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #9e5d3b, #6e4b3d);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn-outline-primary, .btn-outline-secondary {
+            border-radius: 30px;
             font-size: 0.9rem;
+            padding: 0.75rem 1.25rem;
+            border: 2px solid transparent;
+            color: #5e5e5e;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-primary {
+            border-color: #007bff;
+            color: #007bff;
+        }
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+            box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.1);
+        }
+        .btn-outline-secondary {
+            border-color: #6c757d;
+            color: #6c757d;
+        }
+        .btn-outline-secondary:hover {
+            background-color: #6c757d;
+            color: #fff;
+            border-color: #6c757d;
+            box-shadow: 0px 5px 15px rgba(108, 117, 125, 0.1);
         }
         .badge-status {
-            font-size: 0.8rem;
-            padding: 0.4rem 0.6rem;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+        }
+        .modal-content {
+            border-radius: 8px;
+        }
+        .form-control {
+            border-radius: 30px;
+        }
+        .modal-footer .btn {
+            border-radius: 30px;
+        }
+        .card-title {
+            font-weight: 600;
+        }
+        .card-text {
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -47,7 +115,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
-                                <h5 class="card-title mb-0">Manage Suppliers</h5>
+                                <h5 class="mb-0" style="color: white;">Manage Suppliers</h5>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#addSupplierModal">Add New Supplier</button>
                             </div>
                             <div class="card-body">
@@ -118,7 +186,7 @@
                                         <label for="email">Email</label>
                                         <input type="email" class="form-control" id="email" name="email">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Add Supplier</button>
+                                    <button type="submit" class="btn btn-primary btn-block">Add Supplier</button>
                                 </form>
                             </div>
                         </div>

@@ -10,15 +10,147 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Category Management</title>
     <style>
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
+        /* General Button Styling */
         .btn {
-            font-size: 0.9rem;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Primary Button */
+        .btn-primary {
+            background: linear-gradient(135deg, #6e4b3d, #9e5d3b);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #9e5d3b, #6e4b3d);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Outline Primary Button (Edit Button) */
+        .btn-outline-primary {
+            border: 2px solid #007bff;
+            color: #007bff;
+            background-color: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Outline Danger Button (Delete Button) */
+        .btn-outline-danger {
+            border: 2px solid #dc3545;
+            color: #dc3545;
+            background-color: transparent;
+        }
+
+        .btn-outline-danger:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        /* Modal Button Styles */
+        .modal-footer .btn {
+            border-radius: 20px;
+            font-size: 16px;
+        }
+
+        /* Specific Hover for Action Buttons (Edit/Delete) */
+        .table .btn-outline-primary:hover,
+        .table .btn-outline-danger:hover {
+            cursor: pointer;
+            opacity: 0.85;
+        }
+
+        /* Input Fields Styling */
         .form-control {
-            font-size: 0.9rem;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Focus Effect for Input Fields */
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+        /* Label Styling */
+        .form-group label {
+            font-weight: 600;
+            color: #444;
+            font-size: 15px;
+        }
+
+        /* Modal Close Button */
+        .btn-close {
+            color: white;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        /* Table Hover Effects */
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-body .form-group label {
+            font-weight: bold;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+
+        .modal-content {
+            border-radius: 10px;
+        }
+
+        .btn-close {
+            color: white;
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .form-control {
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -37,7 +169,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h5 class="card-title mb-0">Category Management</h5>
+                                    <h5 class="mb-0" style="color: white;">Category Management</h5>
                                     <button class="btn btn-primary" data-toggle="modal" data-target="#addCategoryModal">Add New Category</button>
                                 </div>
                                 <div class="card-body">
@@ -85,9 +217,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="addCategoryModalLabel">Add New Category</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <form action="/categories/add" method="POST">
@@ -100,9 +230,12 @@
                                             <label for="categoryDescription">Description</label>
                                             <textarea class="form-control" id="categoryDescription" name="categoryDescription" rows="3"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Add Category</button>
-                                    </form>
                                 </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Add Category</button>
+                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -114,9 +247,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="editCategoryModalLabel">Edit Category</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <form action="/categories/edit" method="POST">
@@ -130,7 +261,10 @@
                                             <label for="editCategoryDescription">Description</label>
                                             <textarea class="form-control" id="editCategoryDescription" name="categoryDescription" rows="3"></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Update Category</button>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                            <button type="submit" class="btn btn-primary">Update Category</button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

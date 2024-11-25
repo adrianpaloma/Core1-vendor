@@ -10,9 +10,19 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Low Stock Alerts</title>
     <style>
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .low-stock-card {
             transition: box-shadow 0.3s ease;
@@ -35,9 +45,33 @@
             vertical-align: middle;
         }
         .restock-btn {
-            font-size: 0.9rem;
-            padding: 0.4rem 0.6rem;
-        }
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        border-radius: 30px;
+        font-weight: 600;
+        border: 2px solid #d9534f;
+        background-color: transparent;
+        color: #d9534f;
+        transition: all 0.3s ease;
+    }
+
+    .restock-btn:hover {
+        background-color: #d9534f;
+        color: white;
+        border-color: #d9534f;
+    }
+
+    .restock-btn:focus {
+        box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.25);
+    }
+
+    .restock-btn:active {
+        transform: translateY(2px);
+    }
+
+    .restock-btn .fa {
+        margin-right: 0.5rem;
+    }
     </style>
 </head>
 <body>
@@ -55,7 +89,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header d-flex justify-content-between align-items-center">
-                                <h5 class="card-title low-stock-title mb-0">Low Stock Alerts</h5>
+                                <h5 class="mb-0" style="color: white;">Low Stock Alerts</h5>
                             </div>
                             <div class="card-body">
                                 <div class="row">

@@ -12,9 +12,19 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Inventory Report</title>
     <style>
+            .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .inventory-metrics {
             display: flex;
@@ -55,7 +65,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-title mb-0">Coffee Inventory Report</h5>
+                                <h5 class="mb-0" style="color: white;">Inventory Reports</h5>
                             </div>
                             <div class="card-body">
                                 <!-- Filter Options -->

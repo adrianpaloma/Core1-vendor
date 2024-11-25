@@ -11,29 +11,106 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Transaction History</title>
     <style>
-        .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
         }
+        .card-header {
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
         .transaction-table {
             margin-bottom: 0;
+            border-collapse: collapse;
+            width: 100%;
         }
+
+        .transaction-table th, .transaction-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .transaction-table th {
+            background-color: #f7f7f7;
+            font-weight: 600;
+        }
+
         .badge {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
         }
+
         .transaction-icon {
             font-size: 1.3rem;
             vertical-align: middle;
             margin-right: 0.5rem;
         }
+
         .transaction-amount {
             font-weight: 600;
+            font-size: 1.1rem;
         }
+
         .credit {
             color: #28a745;
         }
+
         .debit {
             color: #dc3545;
+        }
+
+        .action-btn {
+            font-size: 0.85rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .action-btn:hover {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .card-body .btn-outline-primary {
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .transaction-table td .btn {
+            padding: 0.3rem 0.8rem;
+        }
+        
+        /* Adding a focus effect to buttons */
+        .action-btn:focus {
+            box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.5);
+            outline: none;
         }
     </style>
 </head>
@@ -52,7 +129,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-title mb-0">Transaction History</h5>
+                                <h5 class="mb-0" style="color: white;">Transaction History</h5>
                             </div>
                             <div class="card-body">
                                 <table class="table table-hover transaction-table">
@@ -75,7 +152,7 @@
                                             <td><span class="badge badge-success">Completed</span></td>
                                             <td class="transaction-amount debit">₱250</td>
                                             <td>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                                <a href="#" class="btn btn-outline-primary btn-sm action-btn">Details</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -85,7 +162,7 @@
                                             <td><span class="badge badge-warning">Pending</span></td>
                                             <td class="transaction-amount credit">₱500</td>
                                             <td>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                                <a href="#" class="btn btn-outline-primary btn-sm action-btn">Details</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -95,7 +172,7 @@
                                             <td><span class="badge badge-danger">Failed</span></td>
                                             <td class="transaction-amount debit">₱75</td>
                                             <td>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                                <a href="#" class="btn btn-outline-primary btn-sm action-btn">Details</a>
                                             </td>
                                         </tr>
                                         <tr>
@@ -105,7 +182,7 @@
                                             <td><span class="badge badge-info">Processing</span></td>
                                             <td class="transaction-amount credit">₱120</td>
                                             <td>
-                                                <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                                <a href="#" class="btn btn-outline-primary btn-sm action-btn">Details</a>
                                             </td>
                                         </tr>
                                     </tbody>

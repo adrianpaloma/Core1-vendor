@@ -10,10 +10,19 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Stocks Overview</title>
     <style>
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
             background-color: #744c24;
-            color: #ffffff;
+            color: white;
             font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .stock-item {
             background-color: #f7f9fc;

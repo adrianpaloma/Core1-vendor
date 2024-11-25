@@ -10,9 +10,19 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Add New Product</title>
     <style>
+          .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .form-control {
             font-size: 0.9rem;
@@ -21,77 +31,114 @@
             font-size: 0.9rem;
             padding: 0.5rem 1rem;
         }
+        .form-group img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .form-group .input-group {
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
-    <div class="dashboard-main-wrapper">
-        @include('home.header')
-        @include('home.sidenav')
+<div class="dashboard-main-wrapper">
+    @include('home.header')
+    @include('home.sidenav')
 
-        <div class="dashboard-wrapper">
-            <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content">
+    <div class="dashboard-wrapper">
+        <div class="dashboard-ecommerce">
+            <div class="container-fluid dashboard-content">
 
-                    <!-- Start Add New Product Section -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Add New Product</h5>
-                                </div>
-                                <div class="card-body">
-                                    <form action="/products/add" method="POST" enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="form-group">
-                                            <label for="productName">Product Name</label>
-                                            <input type="text" class="form-control" id="productName" name="productName" required>
+                <!-- Start Add New Product Section -->
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="mb-0" style="color: white;">Add New Products</h5>
+                            </div>
+                            
+                            <div class="card-body">
+                                <form action="/products/add" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="productName">Product Name</label>
+                                        <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter product name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productDescription">Description</label>
+                                        <textarea class="form-control" id="productDescription" name="productDescription" rows="4" placeholder="Enter product description"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="category">Category</label>
+                                        <select class="form-control" id="category" name="category">
+                                            <option value="Coffee Beans">Coffee Beans</option>
+                                            <option value="Espresso Machines">Espresso Machines</option>
+                                            <option value="Accessories">Accessories</option>
+                                            <option value="Milk Frothers">Milk Frothers</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="price">Price ($)</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="number" class="form-control" id="price" name="price" step="0.01" placeholder="Enter product price" required>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="productDescription">Description</label>
-                                            <textarea class="form-control" id="productDescription" name="productDescription" rows="3"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="category">Category</label>
-                                            <select class="form-control" id="category" name="category">
-                                                <option>Coffee Beans</option>
-                                                <option>Espresso Machines</option>
-                                                <option>Accessories</option>
-                                                <option>Milk Frothers</option>
-                                                <option>Others</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="price">Price ($)</label>
-                                            <input type="number" class="form-control" id="price" name="price" step="0.01" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="stock">Stock Quantity</label>
-                                            <input type="number" class="form-control" id="stock" name="stock" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="productImage">Upload Image</label>
-                                            <input type="file" class="form-control-file" id="productImage" name="productImage">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Add Product</button>
-                                        <a href="/products" class="btn btn-secondary">Cancel</a>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="stock">Stock Quantity</label>
+                                        <input type="number" class="form-control" id="stock" name="stock" placeholder="Enter stock quantity" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productImage">Upload Image</label>
+                                        <input type="file" class="form-control-file" id="productImage" name="productImage" accept="image/*" onchange="previewImage(event)">
+                                        <img id="imagePreview" class="mt-3" src="#" alt="Image Preview" style="display: none;">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="/products" class="btn btn-secondary btn-block">Cancel</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <!-- End Add New Product Section -->
-
                 </div>
+                <!-- End Add New Product Section -->
+
             </div>
         </div>
-
-        @include('home.footer')
     </div>
 
-    <script src="home/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="home/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="home/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <script src="home/assets/libs/js/main-js.js"></script>
+    @include('home.footer')
+</div>
+
+<script src="home/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+<script src="home/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="home/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+<script src="home/assets/libs/js/main-js.js"></script>
+
+<script>
+    function previewImage(event) {
+        const output = document.getElementById('imagePreview');
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function() {
+            output.style.display = 'block';
+            output.src = reader.result;
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
 </body>
 </html>

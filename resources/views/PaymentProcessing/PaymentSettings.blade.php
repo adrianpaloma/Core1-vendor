@@ -11,9 +11,19 @@
     <link rel="stylesheet" href="home/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <title>Payment Settings</title>
     <style>
+         .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
         .card-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e0e0e0;
+            background-color: #744c24;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
         .settings-title {
             font-size: 1.2rem;
@@ -60,13 +70,56 @@
             transform: translateX(20px);
         }
         .payment-method-label {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 500;
             margin-left: 10px;
+            display: inline-block;
+            vertical-align: middle;
         }
         .description {
             font-size: 0.9rem;
             color: #6c757d;
+            margin-left: 20px;
+            display: block;
+        }
+        .payment-method-row {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+        .payment-method-row:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background-color: #e9ecef;
+        }
+        .btn-primary {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #6e4b3d, #9e5d3b);
+            color: #fff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #9e5d3b, #6e4b3d);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        .payment-method-row i {
+            font-size: 1.3rem;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .payment-method-row i:hover {
+            color: #28a745;
+        }
+        .save-button-container {
+            text-align: right;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -85,76 +138,84 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h5 class="card-title mb-0">Payment Settings</h5>
+                                <h5 class="mb-0" style="color: white;">Payment Settings</h5>
                             </div>
                             <div class="card-body">
                                 <div class="settings-title">Manage Payment Methods</div>
 
                                 <!-- Payment Method: Credit Card -->
-                                <div class="row align-items-center mb-3">
-                                    <div class="col-md-8">
-                                        <label class="payment-method-label">
-                                            <i class="fas fa-credit-card"></i> Credit Card
-                                        </label>
-                                        <p class="description">Allow customers to pay with credit cards (Visa, MasterCard, etc.)</p>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <label class="switch">
-                                            <input type="checkbox" checked>
-                                            <span class="slider"></span>
-                                        </label>
+                                <div class="payment-method-row">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <label class="payment-method-label">
+                                                <i class="fas fa-credit-card"></i> Credit Card
+                                            </label>
+                                            <p class="description">Allow customers to pay with credit cards (Visa, MasterCard, etc.)</p>
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Payment Method: PayPal -->
-                                <div class="row align-items-center mb-3">
-                                    <div class="col-md-8">
-                                        <label class="payment-method-label">
-                                            <i class="fab fa-paypal"></i> PayPal
-                                        </label>
-                                        <p class="description">Allow customers to pay via PayPal account.</p>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider"></span>
-                                        </label>
+                                <div class="payment-method-row">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <label class="payment-method-label">
+                                                <i class="fab fa-paypal"></i> PayPal
+                                            </label>
+                                            <p class="description">Allow customers to pay via PayPal account.</p>
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Payment Method: Bank Transfer -->
-                                <div class="row align-items-center mb-3">
-                                    <div class="col-md-8">
-                                        <label class="payment-method-label">
-                                            <i class="fas fa-university"></i> Bank Transfer
-                                        </label>
-                                        <p class="description">Enable direct bank transfers as a payment option.</p>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider"></span>
-                                        </label>
+                                <div class="payment-method-row">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <label class="payment-method-label">
+                                                <i class="fas fa-university"></i> Bank Transfer
+                                            </label>
+                                            <p class="description">Enable direct bank transfers as a payment option.</p>
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Payment Method: Cash on Delivery -->
-                                <div class="row align-items-center mb-3">
-                                    <div class="col-md-8">
-                                        <label class="payment-method-label">
-                                            <i class="fas fa-money-bill-alt"></i> Cash on Delivery
-                                        </label>
-                                        <p class="description">Allow customers to pay with cash upon delivery.</p>
-                                    </div>
-                                    <div class="col-md-4 text-right">
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider"></span>
-                                        </label>
+                                <div class="payment-method-row">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <label class="payment-method-label">
+                                                <i class="fas fa-money-bill-alt"></i> Cash on Delivery
+                                            </label>
+                                            <p class="description">Allow customers to pay with cash upon delivery.</p>
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="text-right mt-4">
+                                <div class="save-button-container">
                                     <button type="button" class="btn btn-primary">Save Changes</button>
                                 </div>
                             </div>
