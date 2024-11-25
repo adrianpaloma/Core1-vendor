@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Welcomecontroller;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,13 @@ Route::get('/', [Welcomecontroller::class, 'dashboard'])->name('dashboard');
 Route::get('/logins', [Welcomecontroller::class, 'logins'])->name('logins');
 Route::get('/signup', [Welcomecontroller::class, 'signup'])->name(name: 'signup');
 Route::get('/forgot-passwords', [Welcomecontroller::class, 'forgotpasswords'])->name(name: 'forgot-passwords');
+ 
+// User Routes
+Route::get('/signup', [UserController::class, 'create'])->name('signup');   
+Route::post('/users', [UserController::class, 'store'])->name('users.store'); 
+ 
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
