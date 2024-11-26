@@ -3,6 +3,7 @@
 use App\Http\Controllers\Welcomecontroller;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +15,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/register', [Welcomecontroller::class, 'register'])->name(name: 'register');
 Route::get('/', [Welcomecontroller::class, 'dashboard'])->name('dashboard');
-Route::get('/logins', [Welcomecontroller::class, 'logins'])->name('logins');
+Route::get('/logins', [Welcomecontroller::class, 'logins'])->name('logins');    
 Route::get('/signup', [Welcomecontroller::class, 'signup'])->name(name: 'signup');
 Route::get('/forgot-passwords', [Welcomecontroller::class, 'forgotpasswords'])->name(name: 'forgot-passwords');
+
+
+
+
+// Login
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');       
+Route::post('login', [AuthController::class, 'login'])->name('loginsss');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
  
 // User Routes
 Route::get('/signup', [UserController::class, 'create'])->name('signup');   
 Route::post('/users', [UserController::class, 'store'])->name('users.store'); 
- 
+    
+
+
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+
+
+
 
 
 Route::middleware([

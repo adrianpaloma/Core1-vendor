@@ -215,26 +215,26 @@
                                     <div class="coffee-item">
                                         <img src="https://www.coffeehit.co.uk/cdn/shop/articles/coffee-beans-101-the-4-most-popular-beans-explained.jpg?v=1708448895&width=1500" alt="Coffee Beans">
                                         <span>Coffee Beans</span>
-                                        <span class="price">₱45.00 (250 kg)</span>
-                                        <button class="btn btn-primary btn-sm">Order Now</button>
+                                        <spa    n class="price">₱45.00 (250 kg)</span>
+                                        <button class="btn btn-primary btn-sm">View</button>
                                     </div>
                                     <div class="coffee-item">
                                         <img src="https://www.frontrangefed.com/wp-content/uploads/2023/10/cold-brew-coffee-3.jpg" alt="Ground Coffee">
                                         <span>Ground Coffee</span>
                                         <span class="price">₱38.00 (300 kg)</span>
-                                        <button class="btn btn-primary btn-sm">Order Now</button>
+                                        <button class="btn btn-primary btn-sm">View</button>
                                     </div>
                                     <div class="coffee-item">
                                         <img src="https://i5.walmartimages.com/asr/889a05f3-c88e-46a0-a920-fca005bbf45c.aa51acc2a1a312ee9ffc8094f7812324.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Espresso Pods">
                                         <span>Espresso Pods</span>
                                         <span class="price">₱50.00 (200 kg)</span>
-                                        <button class="btn btn-primary btn-sm">Order Now</button>
+                                        <button class="btn btn-primary btn-sm">View</button>
                                     </div>
                                     <div class="coffee-item">
                                         <img src="https://media.twgtea.com/images/default-source/product-images/loose-leaf-teas/4-5-2000x2500/t14_01.tmb-twg_rs450.webp?sfvrsn=a4496484_1" alt="Loose Leaf Tea">
                                         <span>Loose Leaf Tea</span>
                                         <span class="price">₱60.00 (150 kg)</span>
-                                        <button class="btn btn-primary btn-sm">Order Now</button>
+                                        <button class="btn btn-primary btn-sm">View</button>
                                     </div>
                                 </div>
                             </div>

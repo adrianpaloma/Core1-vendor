@@ -45,7 +45,7 @@
                     class="splash-description">Please enter your user information.</span>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ route('logins') }}">
+                <form method="POST" action="{{ route('loginsss') }}">
                     @csrf
                     <div class="form-group">
                         <x-input class="form-control form-control-lg" id="email" name="email" :value="old('email')" type="email" placeholder="Email" 
